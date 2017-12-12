@@ -61,6 +61,7 @@ import com.twitter.hbc.core.endpoint.StreamingEndpoint;
 
 public class FlinkTwitter {
     public static final Integer HASHTAG_LIMIT = 20;
+    public static final List<String> TagArray = new ArrayList<String>(Arrays.asList("NASA", "Discovery", "Interstellar"));
 
     public static void main(String[] args) throws Exception {
         //ParameterTool params = ParameterTool.fromPropertiesFile(args[0]);
@@ -131,7 +132,7 @@ public class FlinkTwitter {
         @Override
         public StreamingEndpoint createEndpoint() {
             StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
-            endpoint.trackTerms(Arrays.asList("NASA", "Discovery", "Interstellar"));
+            endpoint.trackTerms(TagArray);
             return endpoint;
         }
     }

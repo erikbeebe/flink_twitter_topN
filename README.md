@@ -1,9 +1,9 @@
-# flink_twitter_topN
+# Flink Twitter TopN
 Find top N hashtags associated with tweets containing specific terms
 
-## How to run?
+# How to run?
 
-# Local
+## Local
 First, you can execute this locally, without using a Flink cluster, by simply
 editing pom.xml, and update the commandlineArgs section to contain your valid
 Twitter API keys, and then build and run:
@@ -11,7 +11,7 @@ Twitter API keys, and then build and run:
 $ mvn clean package
 $ mvn exec:java
 
-# Cluster
+## Cluster
 If you're running a Flink cluster (and have the 'flink' command in your
 path), you can simply edit the start-twitter.sh script and fill in the
 values for:
