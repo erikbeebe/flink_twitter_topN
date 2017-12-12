@@ -1,6 +1,14 @@
 # Flink Twitter TopN
 Find top N hashtags associated with tweets containing specific terms
 
+# How do I configure things?
+You can just the value for topN and the list of hashtags to extract by modifying:
+```
+public static final Integer HASHTAG_LIMIT = 20;
+public static final List<String> TagArray = new ArrayList<String>(Arrays.asList("NASA", "Discovery", "Interstellar"));
+
+```
+
 # How to run?
 
 ## Local
